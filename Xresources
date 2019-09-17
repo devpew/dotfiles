@@ -1,0 +1,221 @@
+URxvt.scrollstyle: plain
+URxvt.scrollBar: falce
+Xcursor.size: 16
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+!URxvt.letterSpace: 1
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt*termName: xterm-256color
+
+!------------------------------------------------------------------------------
+! Xursor
+!------------------------------------------------------------------------------
+Xcursor.theme: ComixCursors-Opaque-White
+Xcursor.size:32
+!------------------------------------------------------------------------------
+
+!------------------------------------------------------------------------------
+! UXVRT PREFERENCES
+!------------------------------------------------------------------------------
+! URxvt settings:
+! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
+! More info at:
+! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
+!------------------------------------------------------------------------------
+
+URxvt.termName:               rxvt-256color
+URxvt.depth:                  32
+URxvt.geometry:               110x35
+URxvt.loginShell:             true
+URxvt.internalBorder:         0
+URxvt.buffered:               true
+URxvt.saveLines:              100000
+URxvt.skipBuiltinGlyphs:      false
+
+! Fonts
+URxvt.allow_bold:             true
+
+URxvt.font: xft:Hack:size=12:antialias=true:hinting=true,xft:Symbola,xft:UbuntuMonoDerivativePowerline Nerd Font
+URxvt.boldFont: xft:Hack:style=Bold:size=12:antialias=true:hinting=true,xft:DejaVu Sans Mono:size=12,xft:FontAwesome:size=12
+URxvt.italicFont:   xft:Hack:style=Italic:size=12:antialias=true:hinting=true,xft:DejaVu Sans Mono:size=12,xft:FontAwesome:size=12
+URxvt.boldItalicFont:   xft:Hack:style=Bold Italic:size=12:antialias=true:hinting=true,xft:DejaVu Sans Mono:size=12,xft:FontAwesome:size=12
+
+URxvt.keysym.C-minus:     resize-font:smaller
+URxvt.keysym.C-equal:      resize-font:bigger
+URxvt.keysym.C-plus:     resize-font:reset
+URxvt.keysym.C-question:  resize-font:show
+
+! Text
+URxvt.colorUL:                #879C00
+URxvt.lineSpace:              0
+
+! Fix font space
+URxvt.letterSpace:            -1
+
+! Scrollbar
+URxvt.scrollStyle:            rxvt
+URxvt.scrollBar:              false
+URxvt.keysym.Shift-Up:        command:\033]720;1\007
+URxvt.keysym.Shift-Down:      command:\033]721;1\007
+! do not scroll with output
+URxvt.scrollTtyOutput:        false
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt.scrollWithBuffer:       true
+! scroll back to the bottom on keypress
+URxvt.scrollTtyKeypress:      true
+
+! Perl extensions
+URxvt.perl-lib:               $HOME/.urxvt/ext/
+URxvt.perl-ext-common:        default,matcher,url-select,clipboard,resize-font,unichr
+URxvt.matcher.button:         1
+URxvt.keysym.M-u:             perl:url-select:select_next
+URxvt.url-select.launcher:    /usr/bin/xdg-open
+URxvt.url-select.underline:   true
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755:               false
+
+! Cursor
+URxvt.cursorBlink:            true
+URxvt.cursorColor:            #93a1a1
+URxvt.cursorUnderline:        false
+
+! Pointer
+URxvt.pointerBlank:           true
+
+!! CTRL+Arrow Key for Moving
+URxvt.keysym.Control-Up:      \033[1;5A
+URxvt.keysym.Control-Down:    \033[1;5B
+URxvt.keysym.Control-Left:    \033[1;5D
+URxvt.keysym.Control-Right:   \033[1;5C
+!------------------------------------------------------------------------------
+
+!------------------------------------------------------------------------------
+! XTERM PREFERENCES
+!------------------------------------------------------------------------------
+XTerm*termName:               xterm-256color
+XTerm*vt100.locale:           true
+XTerm*vt100.metaSendsEscape:  true
+XTerm*vt100.backarrowKey:     false
+XTerm*ttyModes:               erase ^?
+XTerm*vt100.saveLines:        4096
+XTerm*vt100.geometry:         100x32
+XTerm*vt100.translations:     #override \n\
+                              Ctrl <Key> minus: smaller-vt-font() \n\
+                              Ctrl <Key> plus: larger-vt-font()
+XTerm*vt100.faceName:         xos4 Terminess Powerline:size=16:antialias=true
+XTerm*vt100.boldFont:         xos4 Terminess Powerline:bold:size=16:antialias=true
+XTerm*vt100.allowTitleOps:    true
+XTerm*border:                 off
+xTerm*borderWidth:            0
+XTerm*Thickness:              0
+xTerm*loginShell:             true
+XTerm*multiScroll:            on
+XTerm*background:             #002B36
+!------------------------------------------------------------------------------
+
+! Solarized color scheme for the X Window System
+!
+! http://ethanschoonover.com/solarized
+
+
+! Common
+
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+
+
+! Dark
+
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+
+
+! Light
+
+! #define S_base03        #fdf6e3
+! #define S_base02        #eee8d5
+! #define S_base01        #93a1a1
+! #define S_base00        #839496
+! #define S_base0         #657b83
+! #define S_base1         #586e75
+! #define S_base2         #073642
+! #define S_base3         #002b36
+
+
+! To only apply colors to your terminal, for example, prefix
+! the color assignment statement with its name. Example:
+!
+! URxvt*background:            S_base03
+
+*background:              S_base03
+*foreground:              S_base0
+*fading:                  40
+*fadeColor:               S_base03
+*cursorColor:             S_base1
+*pointerColorBackground:  S_base01
+*pointerColorForeground:  S_base1
+
+*color0:                  S_base02
+*color1:                  S_red
+*color2:                  S_green
+*color3:                  S_yellow
+*color4:                  S_blue
+*color5:                  S_magenta
+*color6:                  S_cyan
+*color7:                  S_base2
+*color9:                  S_orange
+*color8:                  S_base03
+*color10:                 S_base01
+*color11:                 S_base00
+*color12:                 S_base0
+*color13:                 S_violet
+*color14:                 S_base1
+*color15: S_base3
+
+
+! Black + DarkGrey
+*color0:  #262626
+*color8:  #928374
+! DarkRed + Red
+*color1:  #cc241d
+*color9:  #fb4934
+! DarkGreen + Green
+*color2:  #98971a
+*color10: #b8bb26
+! DarkYellow + Yellow
+*color3:  #d79921
+*color11: #fabd2f
+! DarkBlue + Blue
+*color4:  #458588
+*color12: #83a598
+! DarkMagenta + Magenta
+*color5:  #b16286
+*color13: #d3869b
+! DarkCyan + Cyan
+*color6:  #689d6a
+*color14: #8ec07c
+! LightGrey + White
+*color7:  #a89984
+*color15: #ebdbb2
+
+

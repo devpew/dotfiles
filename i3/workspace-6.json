@@ -1,0 +1,45 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 987,
+       "width": 666,
+       "x": 0,
+       "y": 0
+    },
+    "name": "Downloads",
+    "percent": 0.5,
+    "swallows": [
+       {
+       // "class": "^Pcmanfm$",
+       // "instance": "^pcmanfm$",
+       // "title": "^Downloads$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 987,
+       "width": 446,
+       "x": 1057,
+       "y": 0
+    },
+    "name": "Android File Transfer for Linux",
+    "percent": 0.5,
+    "swallows": [
+       {
+       // "class": "^aft\\-linux\\-qt$",
+       // "instance": "^android\\-file\\-transfer$",
+       // "title": "^Android\\ File\\ Transfer\\ for\\ Linux$"
+       }
+    ],
+    "type": "con"
+}
+

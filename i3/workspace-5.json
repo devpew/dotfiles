@@ -1,0 +1,23 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1008,
+       "width": 992,
+       "x": 800,
+       "y": 0
+    },
+    "name": "Steam",
+    "percent": 1,
+    "swallows": [
+       {
+       // "class": "^Steam$",
+       // "instance": "^Steam$",
+       // "title": "^Steam$"
+       }
+    ],
+    "type": "con"
+}
+

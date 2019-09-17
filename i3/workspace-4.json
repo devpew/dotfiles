@@ -1,0 +1,23 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 696,
+       "width": 1176,
+       "x": 0,
+       "y": 0
+    },
+    "name": "i3-save-tree --workspace 4 > ~/.i3/workspace-4.json",
+    "percent": 1,
+    "swallows": [
+       {
+       // "class": "^URxvt$",
+       // "instance": "^urxvt$",
+       // "title": "^i3\\-save\\-tree\\ \\-\\-workspace\\ 4\\ \\>\\ \\~\\/\\.i3\\/workspace\\-4\\.json$"
+       }
+    ],
+    "type": "con"
+}
+

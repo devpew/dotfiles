@@ -1,0 +1,46 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 987,
+       "width": 400,
+       "x": 1435,
+       "y": 1
+    },
+    "name": "Slack - Lodossteam",
+    "percent": 0.5,
+    "swallows": [
+       {
+       "class": "^Slack$",
+       "instance": "^slack$",
+       "title": "^Slack\\ \\-\\ Lodossteam$",
+       "window_role": "^browser\\-window$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 987,
+       "width": 595,
+       "x": 599,
+       "y": 1
+    },
+    "name": "Telegram",
+    "percent": 0.5,
+    "swallows": [
+       {
+       "class": "^TelegramDesktop$",
+       "instance": "^telegram\\-desktop$",
+       "title": "^Telegram$"
+       }
+    ],
+    "type": "con"
+}
+

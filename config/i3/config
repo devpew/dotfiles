@@ -1,0 +1,267 @@
+set $mod Mod4
+font pango:Hack 9
+floating_modifier $mod
+
+# start a terminal
+bindsym $mod+Return exec i3-sensible-terminal
+
+# kill focused window
+bindsym ctrl+q kill
+
+# start dmenu (a program launcher)
+# bindcode $mod+40 exec rofi -show run
+bindsym ctrl+space exec rofi -show run
+
+# change focus
+#bindsym $mod+j focus left
+#bindsym $mod+k focus down
+#bindsym $mod+l focus up
+#bindsym $mod+semicolon focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+#bindsym $mod+Shift+j move left
+#bindsym $mod+Shift+k move down
+#bindsym $mod+Shift+l move up
+#bindsym $mod+Shift+semicolon move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+bindsym $mod+t split toggle
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+bindsym $mod+shift+w sticky toggle
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        #bindsym j resize shrink width 10 px or 10 ppt
+        #bindsym k resize grow height 10 px or 10 ppt
+        #bindsym l resize shrink height 10 px or 10 ppt
+        #bindsym semicolon resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+exec_always --no-startup-id /home/dm/.config/polybar/launch.sh
+
+#bar {
+#status_command i3status
+#status_command  /home/dm/.config/i3/bar.sh
+#status_command py3status -c /home/dm/.config/i3/i3status.conf
+#tray_output primary
+#     
+#}
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #000000 #000000 #ffffff #000000   #000000
+client.focused_inactive #000000 #000000 #ffffff #000000   #000000
+client.unfocused        #000000 #000000 #888888 #000000   #000000
+client.urgent           #000000 #000000 #ffffff #000000   #000000
+client.placeholder      #000000 #000000 #ffffff #000000   #000000
+client.background       #ffffff
+
+########################################################################
+########################################################################
+####
+####                   Workplaces layout 
+####
+########################################################################
+########################################################################
+
+exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/dm/.i3/workspace-1.json'"
+exec --no-startup-id "i3-msg 'workspace 2; append_layout /home/dm/.i3/workspace-2.json'"
+#exec --no-startup-id "i3-msg 'workspace 3; append_layout /home/dm/.i3/workspace-3.json'"
+exec --no-startup-id "i3-msg 'workspace 4; append_layout /home/dm/.i3/workspace-4.json'"
+exec --no-startup-id "i3-msg 'workspace 5; append_layout /home/dm/.i3/workspace-5.json'"
+exec --no-startup-id "i3-msg 'workspace 6; append_layout /home/dm/.i3/workspace-6.json'"
+exec --no-startup-id "i3-msg 'workspace 7; append_layout /home/dm/.i3/workspace-7.json'"
+exec --no-startup-id "i3-msg 'workspace 8; append_layout /home/dm/.i3/workspace-8.json'"
+exec --no-startup-id "i3-msg 'workspace 9; append_layout /home/dm/.i3/workspace-9.json'"
+
+########################################################################
+########################################################################
+####
+####                   Floated windows 
+####
+########################################################################
+########################################################################
+
+for_window [title="Calculator"] floating enable
+for_window [class="^.*"] border pixel 1
+for_window [class="vlc"] floating enable
+for_window [class="mpv"] floating enable
+for_window [class="vlc"] sticky enable
+
+########################################################################
+########################################################################
+####
+####                   HOTKEYS 
+####
+########################################################################
+########################################################################
+
+bindsym XF86MonBrightnessDown exec xbacklight -dec 7  # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 7 
+
+bindsym XF86AudioRaiseVolume exec amixer -q sset Master 3%+
+bindsym XF86AudioLowerVolume exec amixer -q sset Master 3%-
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
+
+bindsym $mod+Shift+p exec gnome-calculator
+
+bindcode $mod+110 exec gksudo /home/dm/soft/vpn1.sh #win+PgUp
+bindcode $mod+115 exec gksudo /home/dm/soft/vpn2.sh #win+PgDown
+bindcode $mod+118 exec gksudo /home/dm/soft/vpn_off.sh #win+ins
+
+bindsym ctrl+backslash exec /home/dm/soft/passmenu
+bindsym $mod+shift+y exec /home/dm/soft/youtube_vlc.sh
+
+bindcode $mod+34 exec /home/dm/soft/encrypt_personal_docs.sh #mod+[
+bindcode $mod+35 exec /home/dm/soft/decrypt_personal_docs.sh #mod+]
+
+bindsym --release ctrl+shift+4 exec "/home/dm/soft/screenshot.sh"
+bindsym --release ctrl+shift+5 exec "/home/dm/soft/screenshot_local.sh"
+
+bindcode $mod+shift+118 exec "caffeine -a"
+bindcode $mod+shift+119 exec "caffeine kill"
+
+bindsym --release ctrl+shift+6 exec "/home/dm/soft/screencast3.sh"
+
+bindsym ctrl+shift+7 exec "/home/dm/soft/youtube_one_click.sh"
+
+#bindsym $mod+i exec slock
+bindsym $mod+l exec "setxkbmap -layout us && sleep 0.1 && setxkbmap -option grp:caps_toggle 'us,ru' -option grp_led:caps && sleep 0.1 && i3lock -c 111111"
+
+#bindsym $mod+l exec "/home/dm/fuzzy_lock.sh"
+#bindsym $mod+k exec i3-msg exec 'i3lock -c 000000' && systemctl suspend
+
+########################################################################
+########################################################################
+####
+####                   AUTOLOAD 
+####
+########################################################################
+########################################################################
+
+exec_always setxkbmap -option grp:caps_toggle "us,ru" -option grp_led:caps
+
+exec xrandr --output eDP1 --mode 2560x1440 --scale 0.7x0.7
+exec xrandr --auto --output HDMI1 --mode 3440x1440 --above eDP1
+
+exec pa-applet
+exec_always nm-applet
+exec_always blueman-applet
+exec --no-startup-id dropbox start
+
+#exec pulseaudio-mixer-applet
+#exec pnmixer
+exec telegram-desktop
+#exec typora
+#exec slack
+#exec atom
+exec firefox
+exec_always caffeine
+#exec_always --no-startup-id xfce4-power-manager
+
+exec_always xautolock -time 4 -locker "slock" &
+#exec --no-startup-id xset dpms 600
+#exec xs-lock -- slock
+
+#exec_always xautolock -time 1 -locker "slock" &
+#exec_always xautolock -time 2 -locker "systemctl suspend" &
+#exec xs-lock -- slock &
+
+#exec --no-startup-id xautolock -time 1 -locker 'i3lock -d -c 111111' &
+
+#exec xautolock -time 10 -locker "slock" &
+#exec xautolock -time 20 -locker "systemctl suspend" &
+
+#exec xautolock -time 1 -locker "/home/dm/fuzzy_lock.sh"
+#exec --no-startup-id xautolock -time 1 -locker 'i3lock -d -c 111111' &
+
+#it worked
+#exec --no-startup-id xautolock -detectsleep -time 15 -locker 'systemctl suspend'
+
+exec "/usr/local/bin/hotplug_mon.sh"
+
+#xrandr --output DP1 --brightness 0.6
