@@ -4,7 +4,6 @@ set nocompatible  " required, but i don't know what is it
 filetype off  " required by vundle, but if i will need it in the future i can turn it on after the last Vundle command. like that - filetype plugin indent on
 set exrc "If this option is turned on we could use different .vimrc config files based on directory
 
-
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -22,7 +21,6 @@ Plugin 'inkarkat/vim-ingo-library'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 set nofoldenable
-
 
 Plugin 'MarcWeber/vim-addon-mw-utils'
 
@@ -107,10 +105,6 @@ let g:gruvbox_contrast_dark="meduim"
 if !exists('g:airline_symbols')
     let g:airline_symbols = {} 
 endif
-
-
-
-
 
 " unicode symbols
 let g:airline_left_sep = '»'
@@ -306,11 +300,6 @@ vmap <Leader>t> :Tabularize /=>\zs<CR>
 "    call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
 "  endif
 "endfunction
-
-
-
-
-
 
 nmap <leader>m ggi---<ENTER>title: My Awesome Post<ENTER>tags: ['some', 'tags', 'here']<ENTER>status: draft<ENTER>---<ESC>
 
