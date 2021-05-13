@@ -19,19 +19,19 @@ URxvt.depth:                32
 URxvt.geometry:             90x30
 URxvt.transparent:          false
 URxvt.fading:               0
-! URxvt.urgentOnBell:         true
-! URxvt.visualBell:           true
+! URxvt.urgentOnBell:       true
+! URxvt.visualBell:         true
 URxvt.loginShell:           true
 URxvt.saveLines:            1000000
-!URxvt.internalBorder:       3
+!URxvt.internalBorder:      3
 URxvt.lineSpace:            0
 
-URxvt.externalBorder: 3
-URxvt.internalBorder: 3
-vim.internalBorder: 0
-vim.externalBorder: 0
-!URxvt.borderLess: true
-URxvt*inheritPixmap: true
+URxvt.externalBorder:       3
+URxvt.internalBorder:       3
+vim.internalBorder:         0
+vim.externalBorder:         0
+!URxvt.borderLess:          true
+URxvt*inheritPixmap:        true
 
 ! Fix font space
 !URxvt*letterSpace: -1
